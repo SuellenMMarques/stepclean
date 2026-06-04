@@ -443,13 +443,13 @@ header {
 margin-top: 3rem;
 }
 
-.diferenciais {
+.differences {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.diferencial {
+.differential {
     background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: var(--radius-md);
@@ -457,25 +457,25 @@ margin-top: 3rem;
     transition: var(--transition);
 }
 
-.diferencial:hover {
+.differential:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--accent);
 }
 
-.diferencial-icon-container img {
+.differential-icon-container img {
     width: 3.125rem;
     height: 3.125rem;
     margin-bottom: 1rem;
 }
 
-.diferencial h4 {
+.differential h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--white);
 }
 
-.diferencial p {
+.differential p {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
