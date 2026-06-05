@@ -40,7 +40,7 @@ const footer = `
                 <a href="index.html">
                     <img src="./assets/Logo StepClean - Para fundo escuro.png" alt="Logo StepClean">
                 </a>
-                <p>Lavanderia especializada em tênis - Taubaté, SP. <br>Limpeza profissional com diagnóstico individual para cada par.</p>
+                <p>Lavanderia especializada em tênis. <br>Limpeza profissional com diagnóstico individual para cada par.</p>
             </div>
 
             <div class="container-links-footer">
@@ -55,7 +55,7 @@ const footer = `
 
                 <div class="container-contact">
                     <p>Rua Domingos Rodrigues do Prado, 99
-                        Vila Edmundo - Taubaté, SP</p>
+                        <br>Vila Edmundo - Taubaté, SP</p>
                     <p>(12) 988881170</p>
                     <p>contato@stepclean.com.br</p>
                 </div>
