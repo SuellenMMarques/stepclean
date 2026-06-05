@@ -36,6 +36,25 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-darker);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-dark);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,6 +65,7 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    cursor: url('./assets/mouse.png'), auto;
 }
 
 img {
