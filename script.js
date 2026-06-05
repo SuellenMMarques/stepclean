@@ -3,33 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById("hero-canvas");
     const ctx = canvas.getContext("2d");
 
-    // Configurações da sua animação
-    const totalFrames = 32; // Altere para o número total de imagens que você tem
+    const totalFrames = 40; 
     const images = [];
     let currentFrame = 0;
 
-    // Controle de velocidade (FPS)
-    let fps = 5; // 24 quadros por segundo é o padrão de cinema
+    let fps = 10;
     let interval = 1000 / fps;
     let then = Date.now();
 
-    // 1. Pré-carregamento das imagens na memória
     for (let i = 1; i <= totalFrames; i++) {
         const img = new Image();
-        // O padStart(3, '0') transforma 1 em '001', 15 em '015', etc.
         const frameNumber = String(i).padStart(3, "0");
-        img.src = `./assets/agua-frames/frame_${frameNumber}.jpg`; // Ajuste o caminho
+        img.src = `./assets/agua-frames/frame-${frameNumber}.jpg`;
         images.push(img);
     }
 
     // Ajusta o tamanho do canvas para o tamanho da tela
 
     function resizeCanvas() {
-        const container = canvas.parentElement;
+        const container = canvas.closest(".hero");
         canvas.width = container.offsetWidth;
         canvas.height = container.offsetHeight;
         drawFrame(currentFrame);
-
     }
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas(); // Chama na primeira carga
