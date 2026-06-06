@@ -553,7 +553,7 @@ header {
     background-image: url('./assets/exemp-reais/adulto3.jpg');
 }
 
-.gallery-overlay {
+.gallery-overlay-home {
     position: absolute;
     inset: 0;
     background: rgba(25, 46, 89, 0.8);
@@ -564,11 +564,11 @@ header {
     transition: var(--transition);
 }
 
-.gallery-card:hover .gallery-overlay {
+.gallery-card:hover .gallery-overlay-home {
     opacity: 1;
 }
 
-.gallery-overlay span {
+.gallery-overlay-home span {
     font-size: .7rem;
     color: var(--white);
     font-weight: 500;
@@ -577,12 +577,8 @@ header {
     transition: var(--transition);
 }
 
-.gallery-card:hover .gallery-overlay span {
+.gallery-card:hover .gallery-overlay-home span {
     transform: translateY(0);
-}
-
-.gallery-placeholder-text {
-    display: none;
 }
 
 /*Testimonials*/
@@ -922,11 +918,11 @@ footer>p {
     background: #f9f9fa;
 }
 
-.comparison{
+.comparison {
     margin-bottom: 3rem;
 }
 
-.comparison h2{
+.comparison h2 {
     font-size: 2.5rem;
     color: var(--bg-dark);
 }
@@ -1062,10 +1058,9 @@ footer>p {
     background: #f9f9fa;
 }
 
-/* ==========================================================================
-   Galeria Page
-   ========================================================================== */
-.galeria-page-container {
+/*Gallery Page*/
+
+.gallery-page-container {
     padding: 5rem 5%;
     max-width: var(--max-width);
     margin: 0 auto;
@@ -1244,24 +1239,31 @@ footer>p {
     color: var(--text-dark);
 }
 
-/* ==========================================================================
-   Contato Page
-   ========================================================================== */
-.contato-section {
+/*Contact Page*/
+.contact-section {
     padding: 5rem 5%;
     background: var(--white);
 }
 
-.contato-grid {
+.contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
-.info-block {
-    margin-bottom: 3rem;
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    align-items: center;
+}
+
+.img-tauste {
+    border-radius: 20px;
+    margin: 1rem auto 0 auto;
 }
 
 .info-block h3 {
@@ -1281,6 +1283,7 @@ footer>p {
     justify-content: space-between;
     border-bottom: 1px dashed #eee;
     padding-bottom: 0.5rem;
+    max-width: 300px;
 }
 
 .hours-list li span {
@@ -1438,7 +1441,7 @@ footer>p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery-overlay span {
+    .gallery-overlay-home span {
         font-size: 1rem;
         color: var(--white);
         font-weight: 700;
@@ -1468,10 +1471,20 @@ footer>p {
         font-size: 2.8rem;
     }
 
-
-    .contato-grid {
-        grid-template-columns: 1fr;
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
         gap: 2rem;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .img-tauste {
+        width: auto;
     }
 
     .timeline::before {
@@ -1502,7 +1515,7 @@ footer>p {
         display: none;
     }
 
-    .logo-btn-container{
+    .logo-btn-container {
         width: auto;
     }
 
@@ -1515,7 +1528,7 @@ footer>p {
         gap: 2rem;
     }
 
-    .nav-links .btn-primary{
+    .nav-links .btn-primary {
         font-size: .9rem;
         padding: 0.5rem;
     }
@@ -1564,7 +1577,20 @@ footer>p {
         align-items: center;
     }
 
-    .services-cards{
-        grid-template-columns:repeat(3, 1fr);
+    .services-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filters {
+        flex-wrap: nowrap;
+    }
+
+    .contact-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact-grid{
+        align-items: center;
     }
 }

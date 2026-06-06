@@ -1,83 +1,80 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const canvas = document.getElementById("hero-canvas");
-    const ctx = canvas.getContext("2d");
 
-    const totalFrames = 40; 
-    const images = [];
-    let currentFrame = 0;
+    if (canvas) {
 
-    let fps = 10;
-    let interval = 1000 / fps;
-    let then = Date.now();
+        const ctx = canvas.getContext("2d");
 
-    for (let i = 1; i <= totalFrames; i++) {
-        const img = new Image();
-        const frameNumber = String(i).padStart(3, "0");
-        img.src = `./assets/agua-frames/frame-${frameNumber}.jpg`;
-        images.push(img);
-    }
+        const totalFrames = 40;
+        const images = [];
+        let currentFrame = 0;
 
-    // Ajusta o tamanho do canvas para o tamanho da tela
+        let fps = 10;
+        let interval = 1000 / fps;
+        let then = Date.now();
 
-    function resizeCanvas() {
-        const container = canvas.closest(".hero");
-        canvas.width = container.offsetWidth;
-        canvas.height = container.offsetHeight;
-        drawFrame(currentFrame);
-    }
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas(); // Chama na primeira carga
-
-    // 2. Função para desenhar a imagem atual no canvas
-    function drawFrame(index) {
-        if (images[index] && images[index].complete) {
-            // Limpa o canvas antes de desenhar
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Desenha a imagem cobrindo todo o canvas (simulando object-fit: cover)
-            const imgRatio = images[index].width / images[index].height;
-            const canvasRatio = canvas.width / canvas.height;
-            let drawWidth, drawHeight, x, y;
-
-            if (canvasRatio > imgRatio) {
-                drawHeight = canvas.height;
-                drawWidth = canvas.height * imgRatio;
-                x = (canvas.width - drawWidth) / 2;
-                y = 0;
-            } else {
-                drawWidth = canvas.width;
-                drawHeight = canvas.width / imgRatio;
-                x = 0;
-                y = (canvas.height - drawHeight) / 2;
-            }
-
-            ctx.drawImage(images[index], x, y, drawWidth, drawHeight);
+        for (let i = 1; i <= totalFrames; i++) {
+            const img = new Image();
+            const frameNumber = String(i).padStart(3, "0");
+            img.src = `./assets/agua-frames/frame-${frameNumber}.jpg`;
+            images.push(img);
         }
-    }
 
-    // 3. Loop de animação
-    function animate() {
-        requestAnimationFrame(animate);
-
-        let now = Date.now();
-        let delta = now - then;
-
-        // Só atualiza o frame se o tempo decorrido for maior que o intervalo do FPS
-        if (delta > interval) {
-            then = now - (delta % interval);
-
+        function resizeCanvas() {
+            const container = canvas.closest(".hero");
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
             drawFrame(currentFrame);
-
-            // Avança para o próximo frame ou volta para o zero (loop)
-            currentFrame = (currentFrame + 1) % totalFrames;
         }
-    }
+        window.addEventListener("resize", resizeCanvas);
 
-    // Inicia a animação quando a primeira imagem carregar
-    images[0].onload = () => {
-        animate();
-    };
+        resizeCanvas();
+
+        function drawFrame(index) {
+            if (images[index] && images[index].complete) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                const imgRatio = images[index].width / images[index].height;
+                const canvasRatio = canvas.width / canvas.height;
+                let drawWidth, drawHeight, x, y;
+
+                if (canvasRatio > imgRatio) {
+                    drawHeight = canvas.height;
+                    drawWidth = canvas.height * imgRatio;
+                    x = (canvas.width - drawWidth) / 2;
+                    y = 0;
+                } else {
+                    drawWidth = canvas.width;
+                    drawHeight = canvas.width / imgRatio;
+                    x = 0;
+                    y = (canvas.height - drawHeight) / 2;
+                }
+
+                ctx.drawImage(images[index], x, y, drawWidth, drawHeight);
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            let now = Date.now();
+            let delta = now - then;
+
+            if (delta > interval) {
+                then = now - (delta % interval);
+
+                drawFrame(currentFrame);
+
+                // Avança para o próximo frame ou volta para o zero (loop)
+                currentFrame = (currentFrame + 1) % totalFrames;
+            }
+        }
+
+        images[0].onload = () => {
+            animate();
+        };
+    }
 
     // Mobile Menu
     const mobileBtn = document.querySelector('.mobile-menu-btn');
@@ -119,14 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Galeria Filters
+    // Gallery Filters
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
     if (filterBtns.length > 0 && galleryItems.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active de todos
+
                 filterBtns.forEach(fBtn => fBtn.classList.remove('active'));
                 btn.classList.add('active');
 
