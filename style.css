@@ -960,15 +960,21 @@ footer>p {
     background-color: #f1f5f9;
 }
 
-/*Como Funciona Page*/
+/*how works page*/
+
 .timeline-section {
     padding: 5rem 5%;
     background: var(--white);
 }
 
+.timeline-section h2 {
+    font-size: 2.5rem;
+    color: var(--bg-dark);
+}
+
 .timeline {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     position: relative;
 }
 
@@ -1020,14 +1026,31 @@ footer>p {
     margin-bottom: 0.5rem;
 }
 
-/* Grid de Materiais */
-.materiais-section {
+.deadlines-section h2 {
+    font-size: 2.5rem;
+    color: var(--bg-dark);
+    margin-bottom: 3rem;
+}
+
+.deadlines-section .table-container {
+    max-width: 450px;
+    margin-bottom: 3rem;
+}
+
+/* grid materials */
+.materials-section {
     padding: 5rem 5%;
     background: var(--bg-darker);
     color: var(--white);
 }
 
-.materiais-grid {
+.materials-section h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+
+.materials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -1049,9 +1072,9 @@ footer>p {
     transform: translateY(-5px);
 }
 
-.material-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.material-icon img {
+    width: 50px;
+    margin: 0 auto 1rem auto;
 }
 
 .bg-light {
@@ -1179,9 +1202,8 @@ footer>p {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ==========================================================================
-   FAQ Page
-   ========================================================================== */
+/*FAQ Page*/
+
 .faq-section {
     padding: 5rem 5%;
     background: #f9f9fa;
@@ -1240,6 +1262,7 @@ footer>p {
 }
 
 /*Contact Page*/
+
 .contact-section {
     padding: 5rem 5%;
     background: var(--white);
@@ -1502,8 +1525,12 @@ footer>p {
         font-size: 1.2rem;
     }
 
+    .deadlines-section .table-container{
+        max-width: 700px;
+    }
+
     .services-cards,
-    .materiais-grid {
+    .materials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1590,7 +1617,11 @@ footer>p {
         text-align: left;
     }
 
-    .contact-grid{
+    .contact-grid {
         align-items: center;
+    }
+
+    .deadlines-section .table-container{
+        max-width: var(--max-width);
     }
 }
