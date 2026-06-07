@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Resultados | StepClean</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
     <script src="./components.js"></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <main>
@@ -21,79 +24,103 @@
         </section>
 
         <section class="gallery-page-container">
+
             <div class="filters">
                 <button class="filter-btn active" data-filter="todos">Todos</button>
                 <button class="filter-btn" data-filter="lavagem">Lavagem Básica</button>
                 <button class="filter-btn" data-filter="limpezap">Limpeza Premium</button>
-                <button class="filter-btn" data-filter="impermeabilização">Impermeabilização</button>
-                <button class="filter-btn" data-filter="hidratação">Hidratação</button>
-                <button class="filter-btn" data-filter="repintura">Repintura</button>
-                <button class="filter-btn" data-filter="revitalização">Revitalização Total</button>
+                <button class="filter-btn" data-filter="imperme">Impermeabilização</button>
+                <button class="filter-btn" data-filter="hidrat">Hidratação</button>
+                <button class="filter-btn" data-filter="repint">Repintura</button>
+                <button class="filter-btn" data-filter="revita">Revitalização</button>
             </div>
 
             <div class="gallery-grid">
-                <!-- Item Lavagem 1 -->
-                <div class="gallery-item" data-category="lavagem" style="background-image: url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80');">
+
+                <div class="gallery-item" data-category="lavagem" data-after="./assets/exemp-reais/adulto4.jpg"
+                    style="background-image: url('./assets/exemp-reais/adulto3.jpg');">
                     <div class="gallery-overlay">
-                        <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Limpeza Premium</h4>
-                    </div>
-                </div>
-                
-                <!-- Item Lavagem 2 -->
-                <div class="gallery-item" data-category="lavagem" style="background-image: url('https://images.unsplash.com/photo-1552346154-21d32810baa3?auto=format&fit=crop&w=800&q=80');">
-                    <div class="gallery-overlay">
-                        <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Lavagem Básica</h4>
+                        <h4>Limpeza Básica</h4>
                     </div>
                 </div>
 
-                <!-- Item Restauração -->
-                <div class="gallery-item" data-category="restauracao" style="background-image: url('https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80');">
+                <div class="gallery-item" data-category="lavagem" data-after="./assets/exemp-reais/adulto6.jpg"
+                    style="background-image: url('./assets/exemp-reais/adulto5.jpg');">
                     <div class="gallery-overlay">
-                        <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Revitalização Total</h4>
+                        <h4>Limpeza Básica</h4>
                     </div>
                 </div>
 
-                <!-- Item Repintura -->
-                <div class="gallery-item" data-category="repintura" style="background-image: url('https://images.unsplash.com/photo-1588825807490-2ff112eeb8ea?auto=format&fit=crop&w=800&q=80');">
+                <div class="gallery-item" data-category="lavagem" data-after="./assets/exemp-reais/adulto8.jpg"
+                    style="background-image: url('./assets/exemp-reais/adulto7.jpg');">
                     <div class="gallery-overlay">
-                        <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Repintura Cabedal</h4>
-                    </div>
-                </div>
-                
-                <!-- Item Restauração 2 -->
-                <div class="gallery-item" data-category="restauracao" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80');">
-                    <div class="gallery-overlay">
-                        <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Restauração Camurça</h4>
+                        <h4>Limpeza Básica</h4>
                     </div>
                 </div>
 
-                <!-- Item Repintura 2 -->
-                <div class="gallery-item" data-category="repintura" style="background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80');">
+                <div class="gallery-item" data-category="lavagem" data-after="./assets/exemp-reais/kids2.jpg"
+                    style="background-image: url('./assets/exemp-reais/kids1.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Limpeza Básica</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="limpezap" data-after="./assets/exemp-reais/prem2.jpg"
+                    style="background-image: url('./assets/exemp-reais/prem1.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Lavagem Premium</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="repint" data-after="./assets/exemp-reais/pint2.jpg"
+                    style="background-image: url('./assets/exemp-reais/pint1.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Repintura</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="revita" data-after="./assets/exemp-reais/camurca2.jpg"
+                    style="background-image: url('./assets/exemp-reais/camurca1.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Revitalização</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="imperme" 
+                style="background-image: url('https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80');">
                     <div class="gallery-overlay">
                         <span class="gallery-placeholder-text">Foto real em breve</span>
-                        <h4>Branqueamento de Solado</h4>
+                        <h4>Impermeabilização</h4>
                     </div>
+                </div>
+
+                <div class="gallery-item" data-category="hidrat"
+                    style="background-image: url('https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80');">
+                    <div class="gallery-overlay">
+                        <span class="gallery-placeholder-text">Foto real em breve</span>
+                        <h4>Hidratação</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="lightbox-wrapper">
+                <div class="lightbox" id="lightbox">
+                    <button class="lightbox-close"><img src="./assets/icon-close-light.png" alt="Icon Close"></button>
+                    <img src="" alt="Imagem do Depois" id="lightbox-img">
                 </div>
             </div>
         </section>
-
-        <!-- Lightbox -->
-        <div class="lightbox" id="lightbox">
-            <span class="lightbox-close">&times;</span>
-            <img src="" alt="Imagem Ampliada" id="lightbox-img">
-        </div>
 
         <section class="cta-end">
             <h2>QUER VER SEU TÊNIS AQUI?</h2>
             <p>Traga seu desafio pra gente e se surpreenda com o resultado.</p>
             <a href="./contact.html" class="btn-primary">Agendar Serviço</a>
         </section>
+        
     </main>
 
 </body>
+
 </html>

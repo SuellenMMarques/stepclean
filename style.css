@@ -550,7 +550,7 @@ header {
 }
 
 .gallery-card:nth-child(4) {
-    background-image: url('./assets/exemp-reais/adulto3.jpg');
+    background-image: url('./assets/exemp-reais/pint1.jpg');
 }
 
 .gallery-overlay-home {
@@ -1165,7 +1165,8 @@ footer>p {
 }
 
 /* Lightbox */
-.lightbox {
+
+.lightbox-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -1181,17 +1182,26 @@ footer>p {
     transition: var(--transition);
 }
 
-.lightbox.active {
+.lightbox {
+    position: relative;
+}
+
+.lightbox-wrapper.active {
     opacity: 1;
     pointer-events: auto;
 }
 
 .lightbox-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-darker);
+    right: 60px;
     position: absolute;
-    top: 20px;
-    right: 30px;
-    color: var(--white);
-    font-size: 3rem;
+    width: 35px;
     cursor: pointer;
 }
 
@@ -1525,7 +1535,7 @@ footer>p {
         font-size: 1.2rem;
     }
 
-    .deadlines-section .table-container{
+    .deadlines-section .table-container {
         max-width: 700px;
     }
 
@@ -1536,7 +1546,6 @@ footer>p {
 }
 
 @media screen and (min-width: 900px) {
-
 
     .mobile-menu-btn {
         display: none;
@@ -1621,7 +1630,7 @@ footer>p {
         align-items: center;
     }
 
-    .deadlines-section .table-container{
+    .deadlines-section .table-container {
         max-width: var(--max-width);
     }
 }

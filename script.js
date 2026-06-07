@@ -141,24 +141,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Lightbox
-    const lightbox = document.getElementById('lightbox');
+    const lightbox = document.querySelector('.lightbox-wrapper');
     const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.querySelector('.lightbox-close');
+    const btnCloseLightbox = document.querySelector('.lightbox-close');
 
     if (lightbox && galleryItems.length > 0) {
         galleryItems.forEach(item => {
             item.addEventListener('click', () => {
-                const bgImage = item.style.backgroundImage;
-                // Extrai a URL do background-image
-                const url = bgImage.replace(/(url\(|\)|"|')/g, '');
-                if (url) {
-                    lightboxImg.src = url;
-                    lightbox.classList.add('active');
-                }
+                const imgAfter = item.dataset.after;
+                lightboxImg.src = imgAfter;
+                lightbox.classList.add('active');
             });
         });
 
-        closeLightbox.addEventListener('click', () => {
+        btnCloseLightbox.addEventListener('click', () => {
             lightbox.classList.remove('active');
         });
 
