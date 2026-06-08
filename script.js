@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const wppUrl = `https://api.whatsapp.com/send/?phone=5512988881170&text=${encodeURIComponent(wppText)}`;
 
             window.open(wppUrl, '_blank');
+            contatoForm.reset();
         });
     }
 });

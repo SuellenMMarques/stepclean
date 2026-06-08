@@ -263,7 +263,6 @@ header {
 /*Hero Section*/
 
 .hero {
-    min-height: 100vh;
     padding: 120px 5% 60px;
     display: flex;
     flex-direction: column;
@@ -721,6 +720,7 @@ footer {
     align-items: center;
     text-align: center;
     gap: 1rem;
+    width: 260px;
 }
 
 .container-links-footer,
@@ -1370,13 +1370,12 @@ footer>p {
 
 /* Responsive Design*/
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
 
     header,
     .logo-btn-container,
     main {
         width: 100%;
-        max-width: 375px;
     }
 
     .hero-text h1 {
@@ -1605,6 +1604,10 @@ footer>p {
     .hero-footer-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-logo-container{
+        width: auto;
     }
 
     .container-links-footer {
