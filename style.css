@@ -1184,6 +1184,11 @@ footer>p {
 
 .lightbox {
     position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox-wrapper.active {
@@ -1192,6 +1197,9 @@ footer>p {
 }
 
 .lightbox-close {
+    position: absolute;
+    top: 5px;
+    right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1199,15 +1207,15 @@ footer>p {
     border: none;
     border-radius: 50%;
     background: var(--bg-darker);
-    right: 60px;
-    position: absolute;
     width: 35px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .lightbox img {
     max-width: 90%;
     max-height: 90vh;
+    object-fit: contain;
     border-radius: var(--radius-sm);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
@@ -1542,6 +1550,10 @@ footer>p {
     .materials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .lightbox-close {
+        right: 110px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -1606,7 +1618,7 @@ footer>p {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .text-logo-container{
+    .text-logo-container {
         width: auto;
     }
 
@@ -1635,5 +1647,9 @@ footer>p {
 
     .deadlines-section .table-container {
         max-width: var(--max-width);
+    }
+
+    .lightbox-close {
+        right: 220px;
     }
 }
